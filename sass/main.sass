@@ -1,0 +1,195 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body
+  height: 100%
+
+h1
+  font-size: 50px
+  font-family: MuseoSans
+  font-weight: 500
+  line-height: 75px
+
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.75
+  font-family: $default-font
+  overflow-x: hidden
+  opacity: 1
+  color: $font-color
+  
+.flex-center
+  height: 85px
+  display: flex
+  align-items: center
+  
+.header
+  width: 100%
+  height: 85px
+  background-color: $header
+  position: absolute
+  top: 0
+  z-index: 11
+  .logo
+    width: 167px
+    height: 98px
+    margin-top: 14px
+    position: absolute
+  .desktop-menu
+    ul
+      margin: 0
+      padding: 0
+      margin-left: -45px
+      li
+        display: inline-block
+        margin-left: 60px
+        font-size: 16px
+        a
+          color: $font-color
+          text-decoration: none
+        &:first-child
+          margin-left: 0
+        &.active
+          a
+            color: $accent
+            font-family: OpenSans-Bold
+  .search-button,.search-button-close
+    position: absolute
+    right: 0
+    cursor: pointer
+    font-size: 22px
+    top: 24px
+  .search-button-close
+    display: none
+  .search-inp
+    border: none
+    border-bottom: 1px solid #b6b6b6
+    padding: 10px 20px 10px 10px
+    right: 0
+    position: absolute
+    width: 30%
+    top: 17px
+    font-size: 16px
+    display: none
+    opacity: 1
+    &::placeholder
+      color: #b6b6b6
+  .hamburger
+    position: absolute
+    right: 15px
+    top: 17px
+    display: none
+  .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+    width: 25px
+    height: 3px
+    background-color: #4b4b4b
+  .mobile-menu
+    display: none
+    border-top: 1px solid #eee
+    border-bottom: 1px solid #eee
+    ul
+      margin: 0
+      padding: 0
+      width: 100%
+      list-style: none
+      text-align: center
+      li
+        padding: 15px
+        background: #fff
+        a
+          color: #4b4b4b
+        &.active
+          a
+            color: $accent
+    
+  
+    
+.content
+  position: relative
+  .button-more
+    color: #fff
+    background-color: $accent
+    padding: 25px 43px
+    border-radius: 40px
+    font-family: OpenSans-Bold
+    text-transform: uppercase
+    font-size: 13px
+  .slide-image
+    position: relative
+    margin-top: 80px
+    right: 0
+  .item
+    display: flex
+    align-items: center
+    height: calc(100vh - 80px)
+  .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
+    background-color: $accent
+  .owl-theme .owl-dots .owl-dot span
+    background: #bcbcbc
+  .owl-theme .owl-nav [class*=owl-]
+    background: none
+    color: #a8a8a8
+    font-size: 50px
+    top: 50%
+    margin-top: -25px
+    &:hover
+      color: $accent
+  .owl-prev
+    position: absolute
+    left: -95px
+  .owl-next
+    position: absolute
+    right: -95px
+  .owl-theme .owl-dots
+    margin-top: -50px
+    z-index: 9999
+    position: absolute
+    left: 50%
+    margin-left: -75px
+.footer
+  height: 80px
+  background-color: $footer
+  color: #a3a3a3
+  font-size: 14px
+  font-family: OpenSans-Bold
+  position: absolute
+  bottom: 0
+  width: 100%
+  .footer-text
+    display: flex
+    height: 80px
+    align-items: center
+    margin: 0
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+
+@import "media" // Всегда в конце
